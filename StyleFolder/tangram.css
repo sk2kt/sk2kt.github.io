@@ -1,0 +1,38 @@
+#canvas {
+    border: 2px solid black;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 1px 1px 10px black;
+    transform: translateY(1px);
+    background-color: #ece8ab;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d2954f;
+    overflow: hidden;
+}
+#back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#back-button:hover {
+    background-color: #3e8e41;
+} 
+h1{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
+    font-size: 28px;
+}

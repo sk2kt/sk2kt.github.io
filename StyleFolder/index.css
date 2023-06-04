@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d2954f;
+    text-align: center;
+    overflow: hidden;
+}
+h1 {
+    font-size: 36px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #022343;
+}
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.game {
+    width: 200px;
+    height: 470px;
+    background-color: #d98c34;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex:1 1 200px;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    box-shadow:1px 1px 10px gray;
+    transition:all 0.3s ease-in-out;
+}
+.game button {
+    width: 100%;
+    background-color: #3898ff;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
+    font-size: 28px;
+}
+.game button:hover {
+    background-color: #0056B3;
+}
+.game:hover {
+    transform:scale(1.2);
+    box-shadow:1px 1px 20px black;
+}
+.game p {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.game:hover p {
+    opacity: 1;
+}
+.gameimg {
+    width: 200px;
+    height: 200px;
+}
+.game h3 {
+    line-height: 1.2em;
+    font-size: 1.5em; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 10px;
+    color: #333;
+}
+p.game-desc {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #301c1c;
+    background-color: #c38135;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+footer {
+    background: rgba(128, 128, 128, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+#snake-button {
+    display: block;
+    width: 20px; /* или любой другой размер */
+    height: 20px; /* или любой другой размер */
+    line-height: 20px; /* установите эту высоту равной высоте кнопки */
+    text-align: center;
+    background: #000; /* или любой другой цвет */
+    color: #fff; /* или любой другой цвет */
+    position: absolute;
+    right: 0; /* кнопка прижата к правой стороне */
+    bottom: 0; /* кнопка прижата к нижней стороне */
+    text-decoration: none; /* убираем подчеркивание ссылки */
+}
+p{
+    text-align: left;
+    margin-left: 20px;
+}
+h3{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Создай свой мир</title>
+    <link rel="stylesheet" type="text/css" href="StyleFolder/create.css">
+    <style>
+      #canvas{
+        background-image: url("Images/create/back.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div id="items">
+      <img class="item" src="images/create/tree.png" id="tree" draggable="false" />
+      <img class="item" src="images/create/sun.png" id="sun" draggable="false" />
+      <img class="item" src="images/create/bird.png" id="bird" draggable="false" />
+      <img class="item" src="images/create/house.png" id="house" draggable="false" />
+      <img class="item" src="images/create/cloud.png" id="cloud" draggable="false" />
+      <img class="item" src="images/create/tree2.png" id="tree2" draggable="false" />
+      <img class="item" src="images/create/bird2.png" id="bird2" draggable="false" style="width: 3%; height: 9%;"/>
+      <img class="item" src="images/create/tree1.png" id="tree1" draggable="false" style="width: 5%;"/>
+      <img class="item" src="images/create/house1.png" id="house1" draggable="false" />
+      <img class="item" src="images/create/bird1.png" id="bird1" draggable="false" />
+      <img class="item" src="images/create/grass.png" id="grass" draggable="false" style="width: 3%;"/>
+      <img class="item" src="images/create/bush.png" id="bush" draggable="false" />
+      <img class="item" src="images/create/bush1.png" id="bush1" draggable="false" />
+      <img class="item" src="images/create/fence.png" id="fence" draggable="false" />
+      <img class="item" src="images/create/grass1.png" id="grass1" draggable="false" style="width: 3%;"/>
+      <img class="item" src="images/create/grass2.png" id="grass2" draggable="false" style="width: 3%;"/>
+    </div>
+
+    <div id="canvas"></div>
+
+    <button id="save-btn">Сохранить</button>
+    <button id="home-btn">На главную</button>
+    <button id="undo-btn">Отменить действие</button>
+    <script type="text/javascript" src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
+    <script type="text/javascript" src="ScriptFolder/create.js"></script>
+  </body>
+</html>

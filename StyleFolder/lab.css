@@ -1,0 +1,70 @@
+#canvas {
+    margin: 50px auto;
+    display: block;
+    border: 5px solid black;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d2954f;
+}
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: #d98c34;
+}
+#back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#back-button:hover {
+    background-color: #3e8e41;
+} 
+span {
+    color: #481c02;
+    font-family: 'Signika', sans-serif;
+    padding-bottom: 10px;
+    text-shadow: #1f0d02;
+    font-weight: bold;
+    font-size: large;
+}
+h1{
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 41px ;
+}
+#modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #d2954f;
+    border: 1px solid black;
+}
+
+#modal button {
+    margin: 10px;
+    background-color: #ffa43c;
+}
+
+h1, h2 , button{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
+    text-align: center;
+    font-size: 28px;
+}
+span{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
+}

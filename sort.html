@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сортировка форм</title>
+    <link rel="stylesheet" type="text/css" href="StyleFolder/sort.css">
+</head>
+<body>
+    <div id="game-area">
+        <div class="shape" id="shape1" draggable="true"></div>
+        <div class="hole" id="hole1"></div>
+        <div class="shape" id="shape2" draggable="true"></div>
+        <div class="hole" id="hole2"></div>
+        <div class="shape" id="shape3" draggable="true"></div>
+        <div class="hole" id="hole3"></div>
+        <div class="shape" id="shape4" draggable="true"></div>
+        <div class="hole" id="hole4"></div>
+        <div class="shape" id="shape5" draggable="true"></div>
+        <div class="hole" id="hole5"></div>
+    </div>
+    <div id="modal" style="display:none;">
+        <h2>Поздравляем, вы выиграли!</h2>
+        <button id="restart-button">Играть снова</button>
+        <button id="main-page-button">На главную</button>
+    </div>
+    <button id="back-button" onclick="location.href='index.html'" style="width: 150px; height: 40px;">
+      <svg viewBox="0 0 30 30" width="30" height="30">
+        <path d="M9.375,28.125V15.625H30V9.375H9.375V1.875L0,9.375L9.375,16.875V9.375H30v9.375H9.375z"/>
+      </svg>
+    </button>
+    <script type="text/javascript" src="ScriptFolder/sort.js"></script>
+</body>
+</html>

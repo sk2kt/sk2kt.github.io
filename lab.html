@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Лабиринт</title>
+    <link rel="stylesheet" type="text/css" href="StyleFolder/lab.css">
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h1>Лабиринт</h1>
+      <div style="position: relative;">
+        <span style="position: absolute; top: 0; left: 0; margin: 10px; font-size: 20px;">Старт</span>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <span style="position: absolute; bottom: 0; right: 0; margin: 10px; font-size: 20px;">Финиш</span>
+      </div>
+      <button id="back-button" onclick="location.href='index.html'" style="width: 150px; height: 40px;">
+        <svg viewBox="0 0 30 30" width="30" height="30">
+          <path d="M9.375,28.125V15.625H30V9.375H9.375V1.875L0,9.375L9.375,16.875V9.375H30v9.375H9.375z"/>
+        </svg>
+      </button>
+    </div>
+    <div id="modal" style="display:none;">
+      <h2>Поздравляем, вы выиграли!</h2>
+      <button id="restart-button">Играть снова</button>
+      <button id="main-page-button">На главную</button>
+  </div>
+    <script type="text/javascript" src="ScriptFolder/lab.js"></script>
+  </body>
+</html>
