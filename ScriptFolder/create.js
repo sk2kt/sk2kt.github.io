@@ -28,71 +28,44 @@ function drawItemsOnCanvas() {
     });
 }
 
-items.forEach(function (item) {
+let draggedItemIndex = null;
+
+items.forEach(function (item, index) {
   item.addEventListener("mousedown", function (e) {
-      let imgElement = new Image();
-      imgElement.src = item.src;
-
-      draggedItem = {
-          img: imgElement,
-          width: item.clientWidth,
-          height: item.clientHeight,
-          x: e.offsetX,
-          y: e.offsetY,
-      };
-
-      // Установка размеров перетаскиваемого изображения
-      draggedItem.img.style.width = `${draggedItem.width}px`;
-      draggedItem.img.style.height = `${draggedItem.height}px`;
-
-      offsetX = e.offsetX;
-      offsetY = e.offsetY;
-      document.body.appendChild(draggedItem.img);
+    let imgElement = new Image();
+    imgElement.src = item.src;
+    draggedItemIndex = itemsOnCanvas.length;
+    itemsOnCanvas.push({
+        img: imgElement,
+        width: item.clientWidth,
+        height: item.clientHeight,
+        x: e.clientX - canvasRect.left - item.clientWidth / 2,
+        y: e.clientY - canvasRect.top - item.clientHeight / 2,
+    });
+    drawItemsOnCanvas();
   });
 });
 
-
 document.addEventListener("mousemove", function (e) {
-    if (draggedItem) {
-        draggedItem.img.style.position = "absolute";
-        draggedItem.img.style.left = `${e.pageX - offsetX}px`;
-        draggedItem.img.style.top = `${e.pageY - offsetY}px`;
-    }
+  if (draggedItemIndex !== null) {
+    itemsOnCanvas[draggedItemIndex].x = e.clientX - canvasRect.left - itemsOnCanvas[draggedItemIndex].width / 2;
+    itemsOnCanvas[draggedItemIndex].y = e.clientY - canvasRect.top - itemsOnCanvas[draggedItemIndex].height / 2;
+    drawItemsOnCanvas();
+  }
 });
 
 document.addEventListener("mouseup", function (e) {
-    if (draggedItem) {
-        if (
-            e.clientX > canvasRect.left &&
-            e.clientX < canvasRect.right &&
-            e.clientY > canvasRect.top &&
-            e.clientY < canvasRect.bottom
-        ) {
-            let itemData = {
-                img: draggedItem.img,
-                width: draggedItem.width,
-                height: draggedItem.height,
-                x: e.pageX - canvasRect.left - offsetX,
-                y: e.pageY - canvasRect.top - offsetY,
-            };
-            itemsOnCanvas.push(itemData);
-            drawItemsOnCanvas();
-            document.body.removeChild(draggedItem.img);
-        } else {
-            document.body.removeChild(draggedItem.img);
-        }
-        draggedItem = null;
-    }
+  draggedItemIndex = null;
 });
 
+
 document.querySelector("#save-btn").addEventListener("click", function () {
-    html2canvas(document.querySelector("#canvas")).then((canvas) => {
-        let link = document.createElement("a");
-        link.download = "myworld.png";
-        link.href = canvas.toDataURL();
-        link.click();
-    });
+  let link = document.createElement("a");
+  link.download = "myworld.png";
+  link.href = canvas.toDataURL("image/png");
+  link.click();
 });
+
 
 document.querySelector("#home-btn").addEventListener("click", function () {
     window.location.href = "index.html";
