@@ -1,5 +1,5 @@
 let items = document.querySelectorAll(".item");
-let canvas = document.querySelector("canvas");
+let canvas = document.querySelector("#canvas");
 let canvasRect = canvas.getBoundingClientRect();
 let offsetX, offsetY;
 let draggedItem = null;
@@ -51,12 +51,10 @@ document.addEventListener("mouseup", mouseUpHandler);
 document.addEventListener("mouseout", mouseUpHandler);
 
 document.querySelector('#save-btn').addEventListener('click', function() {
-    html2canvas(document.querySelector("#canvas")).then(canvas => {
-        let link = document.createElement('a');
-        link.download = 'myworld.png';
-        link.href = canvas.toDataURL("image/png");
-        link.click();
-    });
+    let link = document.createElement('a');
+    link.download = 'myworld.png';
+    link.href = canvas.toDataURL("image/png");
+    link.click();
 });
 
 document.querySelector('#home-btn').addEventListener('click', function() {
