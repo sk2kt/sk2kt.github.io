@@ -1,5 +1,5 @@
 let items = document.querySelectorAll(".item");
-let canvas = document.querySelector("#canvas");
+let canvas = document.querySelector("canvas");
 let canvasRect = canvas.getBoundingClientRect();
 let offsetX, offsetY;
 let draggedItem = null;
