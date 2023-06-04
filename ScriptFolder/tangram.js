@@ -1,21 +1,21 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const shapes = [
-    {id: 1, color: 'yellow', shape: [[0, 0], [60, 0], [60, 80], [0, 80]]},
-    {id: 2, color: 'orange', shape: [[60, 0], [120, 0], [90, 30]]}, 
-    {id: 3, color: 'red', shape: [[120, 0], [180, 0], [150, 30]]}, 
-    {id: 4, color: 'green', shape: [[0, 80], [60, 80], [0, 160]]},
-    {id: 5, color: 'purple', shape: [[60, 60], [120, 60], [120, 120], [60, 120]]},
-    {id: 6, color: 'blue', shape: [[120, 60], [180, 60], [150, 120]]}, 
-    {id: 7, color: 'darkgrey', shape: [[30, 135], [30, 165], [0, 150], [60, 150], [30, 195]]},
-    {id: 8, color: 'cyan', shape: [[200, 0], [260, 0], [230, 60]]},
-    {id: 9, color: 'magenta', shape: [[200, 100], [230, 60], [260, 100], [230, 140]]}, 
-    {id: 10, color: 'brown', shape: [[300, 0], [330, 0], [360, 40], [330, 80], [300, 80], [270, 40]]},
-    {id: 11, color: 'black', shape: [[400, 0], [430, 0], [460, 40], [460, 80], [430, 120], [400, 120], [370, 80], [370, 40]]}
+  {id: 1, color: 'yellow', shape: [[0, 0], [200, 0], [100, 100]]}, // Big Triangle 1
+  {id: 2, color: 'red', shape: [[200, 0], [400, 0], [300, 100]]}, // Big Triangle 2
+  {id: 3, color: 'green', shape: [[0, 0], [100, 100], [0, 200]]}, // Small Triangle 1
+  {id: 4, color: 'blue', shape: [[400, 0], [300, 100], [400, 200]]}, // Small Triangle 2
+  {id: 5, color: 'purple', shape: [[200, 200], [300, 100], [400, 200]]}, // Medium Triangle
+  {id: 6, color: 'orange', shape: [[100, 100], [200, 200], [300, 100], [200, 0]]}, // Square
+  {id: 7, color: 'darkgrey', shape: [[0, 200], [100, 100], [200, 200], [100, 300]]} // Parallelogram
 ].map(shape => ({
-    ...shape,
-    shape: shape.shape.map(coord => coord.map(dim => dim * 0.60))
-})); 
+  ...shape,
+  shape: shape.shape.map(coord => coord.map(dim => dim * 0.5))
+}));
+
+
+
+
 
 const canvasWidth = 700;
 const canvasHeight = 700;
