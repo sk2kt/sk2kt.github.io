@@ -76,13 +76,20 @@ window.onload = function() {
             redrawCanvas();
             foundObjects++;
             if (foundObjects === 5) {
-              alert("Поздравляем! Вы нашли все предметы. Начать заново?");
-              location.reload();
+              document.getElementById("modal").style.display = 'block';
             }
             break; // прерываем цикл после нахождения предмета
           }
         }
     }
+    document.getElementById("restart-button").onclick = function() {
+      location.reload();
+    }
+
+    document.getElementById("main-page-button").onclick = function() {
+      window.location.href = 'index.html';  // Измените этот URL на URL главной страницы вашего сайта
+    }
+
     function isOverlappingTooMuch(newImagePos, existingImagePos) {
         const rect1 = {
           left: newImagePos.x,
