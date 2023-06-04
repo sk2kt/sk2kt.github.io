@@ -3,8 +3,71 @@
   <head>
     <title>Найди отличия</title>
     <link rel="stylesheet" type="text/css" href="style/difer3.css">
+    <style>
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+      .wrapper{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      a{
+        display: block;
+        width: 200px;
+        height: 80px;
+        line-height: 40px;
+        font-size: 18px;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: #333;
+        border: 2px solid #333;
+        letter-spacing: 2px;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        font-size: 28px;
+      }
+      a span{
+        position: relative;
+        z-index: 2;
+      }
+      a:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #ff003b;
+        transition: all .35s;
+      }
+      a:hover{
+        color: #fff;
+      }
+      a:hover:after{
+        width: 100%;
+      }
+    
+      </style>
   </head>
   <body>
+    <div id="overlay">
+      <div class="wrapper">
+        <a id="overlay-button"><span>Начать играть!</span></a>
+      </div>
+    </div>
     <h1>Найди 10 отличий</h1>
     <div class="image">
         <img src="img/difer3.jpg" id="img1" class="gameimg" usemap="#differences">
@@ -27,8 +90,17 @@
         <!-- Добавьте больше областей, если требуется -->
     </map>
     <div>
-      <a href="javascript:history.back()"> Назад</a>
+      <a class="back-button" href="javascript:history.back()"> Назад</a>
     </div>
+    <script>
+      const overlay = document.getElementById('overlay');
+      const startButton = document.getElementById('overlay-button');
+
+      startButton.addEventListener('click', function() {
+          overlay.style.display = 'none';
+      });
+
+    </script>
     <script type="text/javascript" src="script/difer3.js"></script>
   </body>
 </html>

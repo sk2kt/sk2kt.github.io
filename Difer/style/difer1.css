@@ -7,7 +7,7 @@ body {
 .image {
     display: inline-block;
     margin: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     border: 5px solid #FFF;
 }
 
@@ -16,20 +16,20 @@ body {
     height: 630px;
 }
 
-a {
+.back-button {
     width: 100%;
     background-color: #3898ff;
     color: #FFF;
     border: none;
     border-radius: 5px;
-    padding: 9px;
+    padding: 5px;
     cursor: pointer;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-variant-caps: all-small-caps;
     font-size: 18px;
 }
 
-a:hover {
+.back-button:hover {
     background-color: #0056B3;
 }
 .red-circle {
