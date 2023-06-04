@@ -1,7 +1,5 @@
 let differencesFound = 0;
 const totalDifferences = document.getElementsByClassName('difference').length;
-
-const differences = document.getElementsByClassName('difference');
 document.getElementById("restart-button").onclick = function() {
     location.reload();
 }
@@ -9,6 +7,8 @@ document.getElementById("restart-button").onclick = function() {
 document.getElementById("main-page-button").onclick = function() {
     history.back(); 
 }
+
+const differences = document.getElementsByClassName('difference');
 for (let i = 0; i < differences.length; i++) {
     differences[i].addEventListener('click', function(event) {
         event.preventDefault();
