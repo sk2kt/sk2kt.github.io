@@ -3,6 +3,14 @@ let canvas = document.querySelector("#canvas");
 let canvasRect = canvas.getBoundingClientRect();
 let offsetX, offsetY;
 let draggedItem = null;
+let context = canvas.getContext("2d");
+let background = new Image();
+background.crossOrigin = "anonymous"; // Это для избегания загрязнения холста
+background.src = "back.jpg"; // URL фонового изображения
+
+background.onload = function(){
+    context.drawImage(background, 0, 0);   
+}
 
 function mouseDownHandler(e) {
     draggedItem = this.cloneNode(true);
