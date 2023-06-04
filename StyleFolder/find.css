@@ -2,6 +2,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #d2954f;
+    overflow: hidden;
   }
   
 .game-container {
@@ -9,14 +11,36 @@ body {
 }
 
 #gameCanvas {
-  border: 1px solid black;
+  border: 10px solid black;
+  border-style: double;
+  --u:  4vmin;	
+	--c1: #ffa726;
+    --c2: #e59319;
+    --c3: #f1a12c;
+    --c4: #cf8b26;
+    --sh: #0006;
+    --sh2: #0002;
+    --gp: 50%/ calc(var(--u) * 2) calc(var(--u) * 2);
+	background:    
+		conic-gradient(from -10deg at 60% 0%, #fff0 0 25%, var(--sh2) 28%, #fff0 31% 100%) var(--gp), 
+		conic-gradient(from -5deg at 0% calc(60% - 1px), #fff0 0, var(--sh) 0%, #fff0 4% 100%) var(--gp),    
+		conic-gradient(from 0deg at 60% calc(60% - 1px), #fff0 0 22%, var(--sh2) 25%, #fff0 25% 100%) var(--gp),     
+		conic-gradient(from 0deg at 60% calc(60% - 1px), var(--c4) 0 25%, #fff0 0 97.5%, var(--sh) 102%) var(--gp),   
+		linear-gradient(180deg, #fff0 0%, var(--sh) 10%, #fff0 10% 50%, var(--sh) 50%, #fff0 60% 101%) var(--gp),   
+		linear-gradient(180deg, #fff0 10%, var(--c3) 10% 50%, #fff0 50% 100%) var(--gp),   
+		linear-gradient(90deg, #fff0 0%, var(--sh) 10%, #fff0 10% 50%, var(--sh) 50%, #fff0 60% 100%) var(--gp),   
+		linear-gradient(90deg, #fff0 10%, var(--c2) 10% 50%, #fff0 50% 100%) var(--gp),   
+		linear-gradient(180deg, #fff0 60%, var(--c1) 60% 100%) var(--gp),   
+		#6a1c00;
 }
 
 #objectsToFind {
   width: 110px;
-  border: 1px solid black;
+  border: 10px solid black;
+  border-style: double;
   padding: 10px;
   margin-left: 20px;
+  background-color: #ecc595;
 }
 
 

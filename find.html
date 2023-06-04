@@ -60,6 +60,23 @@
       a:hover:after{
         width: 100%;
       }
+      .buttons {
+        height: 60px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .back{
+        width: 200px;
+        height: 60px;
+        background-color: #3898ff;
+      }
+      .back:hover{
+        transform: scale(1.2);
+        box-shadow:1px 1px 20px black;
+        background-color: #0056B3;
+      }
     
       </style>
   </head>
@@ -78,6 +95,7 @@
       <button id="restart-button">Играть снова</button>
       <button id="main-page-button">На главную</button>
   </div>
+  <div class="buttons"> <button class="back">Назад</button></div>
     <script>
       const overlay = document.getElementById('overlay');
       const startButton = document.getElementById('overlay-button');
@@ -85,7 +103,11 @@
       startButton.addEventListener('click', function() {
           overlay.style.display = 'none';
       });
+      const backButton = document.querySelector('.back');
 
+      backButton.addEventListener('click', function() {
+          window.history.back();
+      });
     </script>
     <script type="text/javascript" src="ScriptFolder/find.js"></script>
   </body>
