@@ -1,4 +1,4 @@
-
+const html2canvas = require('html2canvas');
 let items = document.querySelectorAll(".item");
 let canvas = document.querySelector("#canvas");
 let canvasRect = canvas.getBoundingClientRect();
