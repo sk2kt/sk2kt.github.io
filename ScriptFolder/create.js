@@ -1,4 +1,3 @@
-
 let items = document.querySelectorAll(".item");
 let canvas = document.querySelector("#canvas");
 let context = canvas.getContext("2d");
