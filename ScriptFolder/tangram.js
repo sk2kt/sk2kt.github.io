@@ -13,9 +13,7 @@ const shapes = [
   shape: shape.shape.map(coord => coord.map(dim => dim * 0.5))
 }));
 
-
-
-
+const saveButton = document.getElementById('save-button');
 
 const canvasWidth = 700;
 const canvasHeight = 700;
@@ -37,10 +35,10 @@ let offset = { x: 0, y: 0 };
 function drawShapes() {
     shapes.forEach(shape => {
       ctx.fillStyle = shape.color;
-      ctx.shadowColor = 'gray';
-      ctx.shadowBlur = 20;
-      ctx.shadowOffsetX = 5;
-      ctx.shadowOffsetY = 5;
+      ctx.shadowColor = 'black';
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetX = 1;
+      ctx.shadowOffsetY = 1;
   
       ctx.beginPath();
       ctx.moveTo(shape.shape[0][0], shape.shape[0][1]);
@@ -109,6 +107,40 @@ function onMouseMove(e) {
   }
 }
 
+function rotateShape(shape, angle) {
+  const radians = (Math.PI / 180) * angle;
+  const centroid = [0, 0];
+  shape.shape.forEach(([x, y]) => {
+      centroid[0] += x; // x
+      centroid[1] += y; // y
+  });
+  centroid[0] /= shape.shape.length;
+  centroid[1] /= shape.shape.length;
+
+  const cos = Math.cos(radians);
+  const sin = Math.sin(radians);
+
+  const rotatedShape = shape.shape.map(([x, y]) => {
+      const dx = x - centroid[0];
+      const dy = y - centroid[1];
+      return [
+          cos * dx - sin * dy + centroid[0],
+          sin * dx + cos * dy + centroid[1]
+      ];
+  });
+
+  return rotatedShape;
+}
+
+function onWheel(e) {
+  e.preventDefault();
+  if (!selectedShape) return;
+  const direction = e.deltaY > 0 ? -1 : 1;
+  const angle = direction * 9;
+  selectedShape.shape = rotateShape(selectedShape, angle);
+  draw();
+}
+
 function onMouseUp(e) {
   e.preventDefault();
   dragging = false;
@@ -120,8 +152,17 @@ function draw() {
   drawShapes();
 }
 
+saveButton.addEventListener('click', function() {
+  const dataUrl = canvas.toDataURL('image/png');
+  const link = document.createElement('a');
+  link.href = dataUrl;
+  link.download = 'tangram.png';
+  link.click();
+});
+
 canvas.addEventListener('mousedown', onMouseDown);
 canvas.addEventListener('mousemove', onMouseMove);
 canvas.addEventListener('mouseup', onMouseUp);
+canvas.addEventListener('wheel', onWheel);
 
 draw();
