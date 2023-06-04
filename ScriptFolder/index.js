@@ -40,15 +40,6 @@ buttons.forEach((button, index) => {
   });
 });
 
-
-buttons.forEach((button, index) => {
-  if (index === 5) {
-    button.textContent = "В разработке";
-    button.style.color = "red";      
-    button.style.fontWeight = "bolder";                  
-  }
-});
-
 // Создаем объект Audio для каждого звука
 const sounds = {
   game1: new Audio('Voicing/1.mp3'),
