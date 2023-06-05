@@ -99,7 +99,10 @@
       startButton.addEventListener('click', function() {
           overlay.style.display = 'none';
       });
-
+      const backButton = document.getElementById('home-btn');
+        backButton.addEventListener('click', function(){
+          localStorage.setItem('visited', 'true');
+        });
     </script>
     <script type="text/javascript" src="ScriptFolder/create.js"></script>
   </body>

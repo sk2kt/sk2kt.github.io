@@ -80,10 +80,12 @@ window.onload = function() {
     }, false);
 
     document.getElementById("restart-button").onclick = function() {
+        localStorage.setItem('visited', 'true');
         location.reload();
     }
 
     document.getElementById("main-page-button").onclick = function() {
-        window.location.href = 'index.html';  // Измените этот URL на URL главной страницы вашего сайта
+        localStorage.setItem('visited', 'true');
+        window.location.href = 'index.html'; 
     }
 }

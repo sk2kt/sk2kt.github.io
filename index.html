@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
@@ -33,7 +33,8 @@
     font-family: sans-serif;
     text-decoration: none;
     color: #333;
-    border: 2px solid #333;
+    border: 18px solid #ff0707;
+    border-style: double;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -118,6 +119,13 @@
       startButton.addEventListener('click', function() {
           overlay.style.display = 'none';
       });
+      window.onload = function() {
+        // Проверяем, был ли пользователь уже на этой странице
+        if (localStorage.getItem('visited') === 'false' || localStorage.getItem('visited') === null) {
+          // Если нет, то показываем оверлей и сохраняем информацию о посещении
+          overlay.style.display = 'flex';
+          localStorage.setItem('visited', 'true');
+        }};
 
     </script>
     <script type="text/javascript" src="ScriptFolder/index.js"></script>

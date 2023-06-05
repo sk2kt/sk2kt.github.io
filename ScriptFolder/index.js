@@ -7,31 +7,37 @@ buttons.forEach((button, index) => {
       case 0:
         game = 'tangram.html';
         fetch(`http://localhost:3000/visit/${game}`);
+        localStorage.setItem('visited', 'false');
         window.location.href = 'tangram.html';
         break;
       case 1:
         game = 'sort.html';
         fetch(`http://localhost:3000/visit/${game}`);
+        localStorage.setItem('visited', 'false');
         window.location.href = 'sort.html';
         break;
       case 2:
         game = 'create.html';
         fetch(`http://localhost:3000/visit/${game}`);
+        localStorage.setItem('visited', 'false');
         window.location.href = 'create.html';
         break;
       case 3:
         game = 'difer.html';
         fetch(`http://localhost:3000/visit/${game}`);
+        localStorage.setItem('visited', 'false');
         window.location.href = 'difer.html';
         break;
       case 4:
         game = 'lab.html';
         fetch(`http://localhost:3000/visit/${game}`);
+        localStorage.setItem('visited', 'false');
         window.location.href = 'lab.html';
         break;
       case 5:
         game = 'find.html';
         fetch(`http://localhost:3000/visit/${game}`);
+        localStorage.setItem('visited', 'false');
         window.location.href = 'find.html';
         break;
       default:

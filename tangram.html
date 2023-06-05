@@ -85,7 +85,10 @@
         startButton.addEventListener('click', function() {
             overlay.style.display = 'none';
         });
-  
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', function(){
+          localStorage.setItem('visited', 'true');
+        });
       </script>
     <button id="save-button">Сохранить</button>
     <script type="text/javascript" src="ScriptFolder/tangram.js"></script>

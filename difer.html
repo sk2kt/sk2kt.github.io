@@ -37,6 +37,12 @@
     <div class="bckbtn">
       <button>На главную </button>
     </div>
+    <script>
+      const backButton = document.getElementById('bckbtn');
+        backButton.addEventListener('click', function(){
+          localStorage.setItem('visited', 'true');
+        });
+    </script>
     <script type="text/javascript" src="ScriptFolder/difer.js"></script>
     </body>
 </html>

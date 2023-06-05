@@ -107,7 +107,7 @@
       
 
       backButton.addEventListener('click', function() {
-          sessionStorage.setItem('visited', 'false');
+          sessionStorage.setItem('visited', 'true');
           window.history.back();
       });
       window.onload = function() {
@@ -117,13 +117,6 @@
           overlay.style.display = 'flex';
           sessionStorage.setItem('visited', 'true');
         }};
-
-      window.addEventListener('beforeunload', function() {
-        sessionStorage.setItem('visited', 'false');
-      });
-      window.onunload = function() {
-        localStorage.setItem('visited', 'false');
-      }
     </script>
     <script type="text/javascript" src="ScriptFolder/find.js"></script>
   </body>
