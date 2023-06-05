@@ -5,6 +5,7 @@ window.onload = function() {
     canvas.height = 600;
   
     const objectsToFindDiv = document.getElementById("objectsToFind");
+    
   
     const images = Array(20)
       .fill()
@@ -87,7 +88,7 @@ window.onload = function() {
     }
 
     document.getElementById("main-page-button").onclick = function() {
-      window.location.href = 'index.html';  // Измените этот URL на URL главной страницы вашего сайта
+      window.location.href = 'index.html';
     }
 
     function isOverlappingTooMuch(newImagePos, existingImagePos) {

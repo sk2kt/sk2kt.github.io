@@ -11,7 +11,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         z-index: 1000;
@@ -97,7 +97,20 @@
       startButton.addEventListener('click', function() {
           overlay.style.display = 'none';
       });
+      window.onload = function() {
+        // Проверяем, был ли пользователь уже на этой странице
+        if (sessionStorage.getItem('visited') === 'false' || sessionStorage.getItem('visited') === null) {
+          // Если нет, то показываем оверлей и сохраняем информацию о посещении
+          overlay.style.display = 'flex';
+          sessionStorage.setItem('visited', 'true');
+        }};
 
+      window.addEventListener('beforeunload', function() {
+        sessionStorage.setItem('visited', 'false');
+      });
+      window.onunload = function() {
+        localStorage.setItem('visited', 'false');
+      }
     </script>
     <script type="text/javascript" src="ScriptFolder/sort.js"></script>
 </body>
