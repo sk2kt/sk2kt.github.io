@@ -48,12 +48,12 @@ buttons.forEach((button, index) => {
 
 // Создаем объект Audio для каждого звука
 const sounds = {
-  game1: new Audio('Voicing/1.mp3'),
-  game2: new Audio('Voicing/2.mp3'),
-  game3: new Audio('Voicing/3.mp3'),
-  game4: new Audio('Voicing/4.mp3'),
-  game5: new Audio('Voicing/5.mp3'),
-  game6: new Audio('Voicing/6.mp3')
+  game1: new Audio('Voicing/tangram.mp3'),
+  game2: new Audio('Voicing/sort.mp3'),
+  game3: new Audio('Voicing/create.mp3'),
+  game4: new Audio('Voicing/difer.mp3'),
+  game5: new Audio('Voicing/lab.mp3'),
+  game6: new Audio('Voicing/find.mp3')
 };
 
 // Переменная для хранения текущего звука

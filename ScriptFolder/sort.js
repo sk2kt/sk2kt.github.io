@@ -75,17 +75,18 @@ window.onload = function() {
             generatePosition(event.target, allElements);
         }
         if (matched === total) {
+            const sound = new Audio('./Voicing/modal.mp3');
+            sound.play();
             document.getElementById("modal").style.display = 'block';
+
         }
     }, false);
 
     document.getElementById("restart-button").onclick = function() {
-        localStorage.setItem('visited', 'true');
         location.reload();
     }
 
     document.getElementById("main-page-button").onclick = function() {
-        localStorage.setItem('visited', 'true');
         window.location.href = 'index.html'; 
     }
 }

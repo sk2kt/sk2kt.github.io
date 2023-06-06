@@ -77,6 +77,8 @@ window.onload = function() {
             redrawCanvas();
             foundObjects++;
             if (foundObjects === 5) {
+              const sound = new Audio('./Voicing/modal.mp3');
+              sound.play();
               document.getElementById("modal").style.display = 'block';
             }
             break; // прерываем цикл после нахождения предмета

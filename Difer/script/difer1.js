@@ -34,6 +34,8 @@ for (let i = 0; i < differences.length; i++) {
 
             if (differencesFound === totalDifferences) {
                 document.getElementById("modal").style.display = 'block';
+                const sound = new Audio('../Voicing/modal.mp3');
+                sound.play();
             }
         }
     });

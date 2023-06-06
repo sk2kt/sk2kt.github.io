@@ -68,6 +68,8 @@ class Player {
     }
     if (this.x === cols - 1 && this.y === rows - 1) {
         document.getElementById("modal").style.display = 'block';
+        const sound = new Audio('./Voicing/modal.mp3');
+        sound.play();
         document.getElementById("restart-button").onclick = function() {
           location.reload();
       }

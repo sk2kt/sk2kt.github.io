@@ -114,6 +114,8 @@
 
         startButton.addEventListener('click', function () {
             overlay.style.display = 'none';
+            const sound = new Audio('../Voicing/rules_difer.mp3');
+            sound.play();
           });
       const backButton = document.getElementById('back-button');
 
