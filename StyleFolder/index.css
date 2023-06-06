@@ -48,6 +48,7 @@ h1 {
 }
 .game button:hover {
     background-color: #0056B3;
+    color: rgb(0, 0, 0);
 }
 .game:hover {
     transform:scale(1.2);
@@ -81,6 +82,8 @@ p.game-desc {
     padding: 10px;
     border-radius: 4px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
   }
 footer {
     background: rgba(128, 128, 128, 0.5);
