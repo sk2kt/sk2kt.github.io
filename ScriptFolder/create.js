@@ -46,6 +46,30 @@ items.forEach(function (item, index) {
   });
 });
 
+let minSize = 50;
+let maxSize = 200;
+let scaleStep = 10; // насколько увеличивается/уменьшается размер при каждом событии прокрутки
+
+document.addEventListener("wheel", function(e) {
+  if (draggedItemIndex !== null) {
+    if (e.deltaY < 0) {
+      // Прокрутка вверх
+      if (itemsOnCanvas[draggedItemIndex].width < maxSize && itemsOnCanvas[draggedItemIndex].height < maxSize) {
+        itemsOnCanvas[draggedItemIndex].width += scaleStep;
+        itemsOnCanvas[draggedItemIndex].height += scaleStep;
+      }
+    } else {
+      // Прокрутка вниз
+      if (itemsOnCanvas[draggedItemIndex].width > minSize && itemsOnCanvas[draggedItemIndex].height > minSize) {
+        itemsOnCanvas[draggedItemIndex].width -= scaleStep;
+        itemsOnCanvas[draggedItemIndex].height -= scaleStep;
+      }
+    }
+    drawItemsOnCanvas();
+  }
+});
+
+
 document.addEventListener("mousemove", function (e) {
   if (draggedItemIndex !== null) {
     itemsOnCanvas[draggedItemIndex].x = e.clientX - canvasRect.left - itemsOnCanvas[draggedItemIndex].width / 2;
