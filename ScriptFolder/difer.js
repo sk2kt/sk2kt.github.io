@@ -22,7 +22,7 @@ buttons.forEach((button, index) => {
         window.location.href = 'Difer/difer6.html';
         break;
       case 6:
-        window.location.href = 'javascript:history.back()';
+        window.location.href = 'index.html';
         break;
       default:
         break;

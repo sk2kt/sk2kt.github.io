@@ -84,7 +84,7 @@
         <area shape="rect" coords="372,407,439,480" href="#" class="difference">
     </map>
     <div>
-      <a class="back-button" href="javascript:history.back()"> Назад</a>
+      <button class="back-button"> Назад</button>
     </div>
     <div id="modal" style="display:none;">
       <h2>Поздравляем, вы выиграли!</h2>
@@ -108,6 +108,11 @@
         startButton.addEventListener('click', function () {
             overlay.style.display = 'none';
           });
+      const backButton = document.getElementById('back-button');
+
+      backButton.addEventListener('click', function (){
+        location.href = '../difer.html'
+      });
     </script>
     <script type="text/javascript" src="script/difer6.js"></script>
   </body>

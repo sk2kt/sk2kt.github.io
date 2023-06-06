@@ -5,7 +5,7 @@ document.getElementById("restart-button").onclick = function() {
 }
 
 document.getElementById("main-page-button").onclick = function() {
-    history.back(); 
+    location.href = '../difer.html';
 }
 
 const differences = document.getElementsByClassName('difference');
