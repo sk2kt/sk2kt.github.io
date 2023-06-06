@@ -20,23 +20,27 @@ canvas {
     top: 20px;
     right: 20px;
     background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
+    color: rgb(0, 0, 0);
+    padding: 0px 24px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
 }
 #back-button:hover {
     background-color: #3e8e41;
 } 
-span {
+#goals {
     color: #481c02;
     font-family: 'Signika', sans-serif;
     padding-bottom: 10px;
     text-shadow: #1f0d02;
     font-weight: bold;
     font-size: large;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
 }
 h1{
     font-weight: bolder;

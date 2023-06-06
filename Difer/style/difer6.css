@@ -6,9 +6,10 @@ body {
 
 .image {
     display: inline-block;
-    margin: 15px;
-    margin-bottom: 5px;
+    margin: 0px;
+    margin-bottom: 1px;
     border: 5px solid #FFF;
+    scale: 0.9;
 }
 
 .gameimg {
@@ -53,6 +54,9 @@ h1{
     padding: 20px;
     background-color: #d2954f;
     border: 1px solid black;
+    z-index: 1000;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
 }
 
 #modal button {

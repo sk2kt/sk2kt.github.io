@@ -57,6 +57,10 @@ body {
     padding: 20px;
     background-color: #d2954f;
     border: 1px solid black;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-variant-caps: all-small-caps;
+    text-align: center;
+    font-size: 20px;
 }
 
 #modal button {
