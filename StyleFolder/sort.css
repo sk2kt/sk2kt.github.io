@@ -24,12 +24,14 @@ body {
     width: 50px;
     height: 50px;
     background-color: red;
+    border: 3px solid black;
+    border-style: dashed;
 }
 
 .hole {
     width: 60px;
     height: 60px;
-    border: 5px solid black;
+    border: 6px solid black;
 }
 
 #shape1, #hole1 {

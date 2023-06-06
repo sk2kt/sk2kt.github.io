@@ -26,7 +26,7 @@ for (let i = 0; i < differences.length; i++) {
             const clickY = event.clientY;
             redCircle.style.left = clickX + - 15 + 'px';
             redCircle.style.top = clickY + -15 + 'px';
-
+            document.getElementById("counter").innerText = `${differencesFound}/${totalDifferences}`;
             // Добавление красного кружка на страницу
             document.body.appendChild(redCircle);
 

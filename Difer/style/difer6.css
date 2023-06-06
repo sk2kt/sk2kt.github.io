@@ -16,7 +16,7 @@ body {
     height: 580px;
 }
 
-.back-button {
+#back-button {
     width: 25%;
     background-color: #3898ff;
     color: #FFF;
@@ -29,7 +29,7 @@ body {
     font-size: 18px;
 }
 
-.back-button:hover {
+#back-button:hover {
     background-color: #0056B3;
 }
 .red-circle {

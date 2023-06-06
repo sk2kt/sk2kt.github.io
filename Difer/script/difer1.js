@@ -8,6 +8,7 @@ document.getElementById("main-page-button").onclick = function() {
     location.href = '../difer.html';
 }
 
+
 const differences = document.getElementsByClassName('difference');
 for (let i = 0; i < differences.length; i++) {
     differences[i].addEventListener('click', function(event) {
@@ -26,6 +27,7 @@ for (let i = 0; i < differences.length; i++) {
             const clickY = event.clientY;
             redCircle.style.left = clickX + - 15 + 'px';
             redCircle.style.top = clickY + -15 + 'px';
+            document.getElementById("counter").innerText = `${differencesFound}/${totalDifferences}`;
 
             // Добавление красного кружка на страницу
             document.body.appendChild(redCircle);

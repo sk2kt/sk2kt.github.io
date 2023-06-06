@@ -69,7 +69,7 @@
         <a id="overlay-button"><span>Начать играть!</span></a>
       </div>
     </div>
-    <h1>Найди 5 отличий</h1>
+    <h1>Найди 5 отличий: <span id="counter">0/5</span></h1>
     <div class="image">
         <img src="img/difer5.jpg" id="img1" class="gameimg" usemap="#differences">
     </div>
@@ -85,7 +85,7 @@
         
     </map>
     <div>
-      <button class="back-button"> Назад</button>
+      <button id="back-button"> Назад</button>
     </div>
     <div id="modal" style="display:none;">
       <h2>Поздравляем, вы выиграли!</h2>
@@ -109,11 +109,9 @@
         startButton.addEventListener('click', function () {
             overlay.style.display = 'none';
           });
-      const backButton = document.getElementById('back-button');
-
-      backButton.addEventListener('click', function (){
-        location.href = '../difer.html'
-      });
+          document.getElementById("back-button").onclick = function() {
+          location.href = '../difer.html';
+        }
     </script>
     <script type="text/javascript" src="script/difer5.js"></script>
   </body>
