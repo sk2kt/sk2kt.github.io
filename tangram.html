@@ -81,13 +81,24 @@
     <script>
         const overlay = document.getElementById('overlay');
         const startButton = document.getElementById('overlay-button');
+
+         document.addEventListener("DOMContentLoaded", () => {
+            if (sessionStorage.getItem('visitedTangram') === 'false' || sessionStorage.getItem('visitedTangram') === null) {
+              // Если нет, то показываем оверлей и сохраняем информацию о посещении
+              overlay.style.display = 'flex';
+              sessionStorage.setItem('visitedTangram', 'true');
+            } else {
+              overlay.style.display = 'none';
+            }
+          });
   
         startButton.addEventListener('click', function() {
             overlay.style.display = 'none';
+            // localStorage.setItem('visited', 'true');
         });
         const backButton = document.getElementById('back-button');
         backButton.addEventListener('click', function(){
-          localStorage.setItem('visited', 'true');
+          // localStorage.setItem('visited', 'true');
         });
       </script>
     <button id="save-button">Сохранить</button>

@@ -100,23 +100,26 @@
       const overlay = document.getElementById('overlay');
       const startButton = document.getElementById('overlay-button');
 
-      startButton.addEventListener('click', function() {
-          overlay.style.display = 'none';
-      });
+      document.addEventListener("DOMContentLoaded", () => {
+          if (sessionStorage.getItem('visitedFind') === 'false' || sessionStorage.getItem('visitedFind') === null) {
+            // Если нет, то показываем оверлей и сохраняем информацию о посещении
+            overlay.style.display = 'flex';
+            sessionStorage.setItem('visitedFind', 'true');
+          } else {
+            overlay.style.display = 'none';
+          }
+        });
+
+        startButton.addEventListener('click', function () {
+            overlay.style.display = 'none';
+          });
       const backButton = document.querySelector('.back');
       
 
       backButton.addEventListener('click', function() {
-          sessionStorage.setItem('visited', 'true');
-          window.history.back();
+          location.href = 'index.html';
       });
-      window.onload = function() {
-        // Проверяем, был ли пользователь уже на этой странице
-        if (sessionStorage.getItem('visited') === 'false' || sessionStorage.getItem('visited') === null) {
-          // Если нет, то показываем оверлей и сохраняем информацию о посещении
-          overlay.style.display = 'flex';
-          sessionStorage.setItem('visited', 'true');
-        }};
+
     </script>
     <script type="text/javascript" src="ScriptFolder/find.js"></script>
   </body>

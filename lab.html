@@ -87,15 +87,25 @@
       <button id="main-page-button">На главную</button>
   </div>
   <script>
-    const overlay = document.getElementById('overlay');
-    const startButton = document.getElementById('overlay-button');
+      const overlay = document.getElementById('overlay');
+      const startButton = document.getElementById('overlay-button');
 
-    startButton.addEventListener('click', function() {
-        overlay.style.display = 'none';
-    });
+      document.addEventListener("DOMContentLoaded", () => {
+          if (sessionStorage.getItem('visitedLab') === 'false' || sessionStorage.getItem('visitedLab') === null) {
+            // Если нет, то показываем оверлей и сохраняем информацию о посещении
+            overlay.style.display = 'flex';
+            sessionStorage.setItem('visitedLab', 'true');
+          } else {
+            overlay.style.display = 'none';
+          }
+        });
+
+        startButton.addEventListener('click', function () {
+            overlay.style.display = 'none';
+          });
     const backButton = document.getElementById('back-button');
         backButton.addEventListener('click', function(){
-          localStorage.setItem('visited', 'true');
+          location.href = 'index.html';
         });
   </script>
     <script type="text/javascript" src="ScriptFolder/lab.js"></script>

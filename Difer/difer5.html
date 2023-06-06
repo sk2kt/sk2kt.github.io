@@ -95,17 +95,19 @@
       const overlay = document.getElementById('overlay');
       const startButton = document.getElementById('overlay-button');
 
-      startButton.addEventListener('click', function() {
-          overlay.style.display = 'none';
-      });
-      window.onload = function() {
-        // Проверяем, был ли пользователь уже на этой странице
-        if (localStorage.getItem('visited') === 'false' || localStorage.getItem('visited') === null) {
-          // Если нет, то показываем оверлей и сохраняем информацию о посещении
-          overlay.style.display = 'flex';
-          localStorage.setItem('visited', 'true');
-        }};
+      document.addEventListener("DOMContentLoaded", () => {
+          if (sessionStorage.getItem('visitedDifer5') === 'false' || sessionStorage.getItem('visitedDifer5') === null) {
+            // Если нет, то показываем оверлей и сохраняем информацию о посещении
+            overlay.style.display = 'flex';
+            sessionStorage.setItem('visitedDifer5', 'true');
+          } else {
+            overlay.style.display = 'none';
+          }
+        });
 
+        startButton.addEventListener('click', function () {
+            overlay.style.display = 'none';
+          });
     </script>
     <script type="text/javascript" src="script/difer5.js"></script>
   </body>
