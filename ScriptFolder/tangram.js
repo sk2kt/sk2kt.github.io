@@ -15,8 +15,8 @@ const shapes = [
 
 const saveButton = document.getElementById('save-button');
 
-const canvasWidth = 700;
-const canvasHeight = 700;
+const canvasWidth = 1100;
+const canvasHeight = 650;
 
 shapes.forEach(shape => {
   shape.shape.forEach(coord => {
