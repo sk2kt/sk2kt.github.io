@@ -97,16 +97,16 @@ footer {
 }
 #snake-button {
     display: block;
-    width: 20px; /* или любой другой размер */
-    height: 20px; /* или любой другой размер */
-    line-height: 20px; /* установите эту высоту равной высоте кнопки */
+    width: 20px; 
+    height: 20px; 
+    line-height: 20px; 
     text-align: center;
-    background: #000; /* или любой другой цвет */
-    color: #fff; /* или любой другой цвет */
+    background: #000; 
+    color: #fff;
     position: absolute;
-    right: 0; /* кнопка прижата к правой стороне */
-    bottom: 0; /* кнопка прижата к нижней стороне */
-    text-decoration: none; /* убираем подчеркивание ссылки */
+    right: 0; 
+    bottom: 0;
+    text-decoration: none;
 }
 p{
     text-align: left;

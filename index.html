@@ -119,14 +119,6 @@
       startButton.addEventListener('click', function() {
           overlay.style.display = 'none';
       });
-      // window.onload = function() {
-      //   // Проверяем, был ли пользователь уже на этой странице
-      //   if (localStorage.getItem('visited') === 'false' || localStorage.getItem('visited') === null) {
-      //     // Если нет, то показываем оверлей и сохраняем информацию о посещении
-      //     overlay.style.display = 'flex';
-      //     localStorage.setItem('visited', 'true');
-      //   }};
-
        window.onload = function () {
           // Проверяем, был ли пользователь уже на этой странице
           console.log(sessionStorage.getItem('visitedIndex'))
