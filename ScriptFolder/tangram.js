@@ -10,7 +10,7 @@ const shapes = [
   {id: 7, color: 'darkgrey', shape: [[0, 400], [100, 300], [300, 300], [200, 400]]} // Parallelogram
 ].map(shape => ({
   ...shape,
-  shape: shape.shape.map(coord => coord.map(dim => dim * 0.5))
+  shape: shape.shape.map(coord => coord.map(dim => dim * 0.8))
 }));
 
 const saveButton = document.getElementById('save-button');
@@ -18,12 +18,12 @@ const saveButton = document.getElementById('save-button');
 const canvasWidth = 1100;
 const canvasHeight = 650;
 
-shapes.forEach(shape => {
-  shape.shape.forEach(coord => {
-    coord[0] *= 2;
-    coord[1] *= 2;
-  });
-});
+// shapes.forEach(shape => {
+//   shape.shape.forEach(coord => {
+//     coord[0] *= 1;
+//     coord[1] *= 1;
+//   });
+// });
 
 let selectedShape = null;
 let startX = 0;
