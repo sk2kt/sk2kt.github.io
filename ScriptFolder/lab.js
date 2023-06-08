@@ -75,7 +75,7 @@ class Player {
       }
    
       document.getElementById("main-page-button").onclick = function() {
-          window.location.href = 'index.html';  // Измените этот URL на URL главной страницы вашего сайта
+          window.location.href = 'index.html'; 
       }
     }
   }
