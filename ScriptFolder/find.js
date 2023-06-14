@@ -128,12 +128,15 @@ window.onload = function() {
       }
     
   
-    canvas.onclick = function(event) {
-      const rect = canvas.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      checkIfObjectFound(x, y);
+      canvas.onclick = function(event) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const x = (event.clientX - rect.left) * scaleX;
+        const y = (event.clientY - rect.top) * scaleY;
+        checkIfObjectFound(x, y);
     };
+    
   
     generateObjectsToFind();
   };
